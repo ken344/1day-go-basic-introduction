@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func counter() func() {
+func counter1() func() {
 	ctr := 0
 	return func() {
 		ctr++
@@ -11,7 +11,7 @@ func counter() func() {
 }
 
 func main() {
-	countfunc := counter()
+	countfunc := counter1()
 	countfunc()
 	countfunc()
 	countfunc()
